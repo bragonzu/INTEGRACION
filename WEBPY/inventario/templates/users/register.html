@@ -5,11 +5,11 @@
       <div class="row">
         <h1 data-aos="fade-up"> Registrar</h1>
 
-<form method="POST" class="post-form" action="{% url 'about' %}"> 
+<form method="POST" class="post-form"> 
     {% csrf_token %}
     <div  data-aos="zoom-out" class="card w-50 bg-transparent mx-auto border-0">
         <div class="card-body">
-            {{form.as_table}}
+            {{form.as_p}}
         </div>
   
         <button type="submit" class="btn btn-success">Success</button>

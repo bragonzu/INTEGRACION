@@ -14,6 +14,8 @@ docker exec -it django_container python3 manage.py startapp $NAMEAPP
 #Dar acceso
 docker exec -it django_container chmod -R 777 myapp/
 docker exec -it django_container chmod -R 777 data 
+docker exec -it django_container chmod -R 777 sql/
+
 docker exec -it django_container python3 manage.py createsuperuser
 
 #Make makemigrations
@@ -25,3 +27,6 @@ docker exec -it django_container python3 manage.py migrate
 #DJANGO SHELL
 docker exec -it django_container python3 manage.py shell
 #Ejm https://i.imgur.com/ySeewfy.png
+
+#Agregando datos .json:
+docker exec -it django_container python3 manage.py loaddata --app inventario data.json

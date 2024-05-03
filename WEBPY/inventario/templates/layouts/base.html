@@ -38,14 +38,17 @@
         class="container-fluid container-xl d-flex align-items-center justify-content-between"
       >
         <a href="" class="logo d-flex align-items-center">
-          <span>Braham</span>
+          <span>Registro Nacional de Identificación y Estado Civil</span>
         </a>
 
         <nav id="navbar" class="navbar">
-          <ul>
+          <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{% static 'img/logo_reniec.png' %}" class="img-fluid" alt="">
+          </div>
+          <!-- <ul>
             <li><a class="nav-link scrollto active" href="{% url 'login' %}">INGRESAR</a></li>
             <li><a class="getstarted scrollto" href="{% url 'registro' %}">REGISTRAR</a></li>
-          </ul>
+          </ul> -->
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
       </div>

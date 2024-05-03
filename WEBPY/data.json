@@ -1,0 +1,303 @@
+[
+    {
+        "model": "inventario.Rol",
+        "pk": 1,
+        "fields": {
+            "id": 1,
+            "nombre": "WebAdmin"
+        }
+    },
+    {
+        "model": "inventario.Rol",
+        "pk": 2,
+        "fields": {
+            "id": 2,
+            "nombre": "UserAdmin"
+        }
+    },
+    {
+        "model": "inventario.Rol",
+        "pk": 3,
+        "fields": {
+            "id": 3,
+            "nombre": "UserSupport"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 1,
+        "fields": {
+            "id": 1,
+            "nombre": "Jefatura Nacional"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 2,
+        "fields": {
+            "id": 2,
+            "nombre": "Gabinete de Asesores"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 3,
+        "fields": {
+            "id": 3,
+            "nombre": "Secretaría General"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 4,
+        "fields": {
+            "id": 4,
+            "nombre": "Oficina de Tecnologia de Informática"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 5,
+        "fields": {
+            "id": 5,
+            "nombre": "Unidad de Soporte Técnico"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 6,
+        "fields": {
+            "id": 6,
+            "nombre": "Unidad de Ingeniería de Software"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 7,
+        "fields": {
+            "id": 7,
+            "nombre": "Unidad de redes"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 8,
+        "fields": {
+            "id": 8,
+            "nombre": "Oficina de Potencial Humano"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 9,
+        "fields": {
+            "id": 9,
+            "nombre": "Unidad de Bienestar"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 10,
+        "fields": {
+            "id": 10,
+            "nombre": "Unidad de Relaciones Laborales"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 11,
+        "fields": {
+            "id": 11,
+            "nombre": "Unidad de Getión de Personas"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 12,
+        "fields": {
+            "id": 12,
+            "nombre": "Oficina de administración y Finanzas"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 13,
+        "fields": {
+            "id": 13,
+            "nombre": "Unidad de Logística"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 14,
+        "fields": {
+            "id": 14,
+            "nombre": "Unidad de Tesorería"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 15,
+        "fields": {
+            "id": 15,
+            "nombre": "Unidad de Contabilidad"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 16,
+        "fields": {
+            "id": 16,
+            "nombre": "Oficina de Asesoría Jurídica"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 17,
+        "fields": {
+            "id": 17,
+            "nombre": "Oficina de Control Institucional"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 18,
+        "fields": {
+            "id": 18,
+            "nombre": "Gerencia General"
+        }
+    },
+    {
+        "model": "inventario.UnidadOrganica",
+        "pk": 19,
+        "fields": {
+            "id": 19,
+            "nombre": "Procuradoría Pública"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 2,
+        "fields": {
+            "id": 2,
+            "nombre": "Crillón"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 3,
+        "fields": {
+            "id": 3,
+            "nombre": "Jr. Ancash"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 4,
+        "fields": {
+            "id": 4,
+            "nombre": "Jr. Pumacahua"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 5,
+        "fields": {
+            "id": 5,
+            "nombre": "San Borja"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 6,
+        "fields": {
+            "id": 6,
+            "nombre": "Erep San Isidro"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 7,
+        "fields": {
+            "id": 7,
+            "nombre": "Cusco"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 8,
+        "fields": {
+            "id": 8,
+            "nombre": "Trujillo"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 9,
+        "fields": {
+            "id": 9,
+            "nombre": "Arequipa"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 10,
+        "fields": {
+            "id": 10,
+            "nombre": "Piura"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 11,
+        "fields": {
+            "id": 11,
+            "nombre": "Tacna"
+        }
+    },
+    {
+        "model": "inventario.Sede",
+        "pk": 12,
+        "fields": {
+            "id": 12,
+            "nombre": "Ica"
+        }
+    },
+    {
+        "model": "inventario.Estado",
+        "pk": 1,
+        "fields": {
+            "id": 1,
+            "nombre": "Activo"
+        }
+    },
+    {
+        "model": "inventario.Estado",
+        "pk": 2,
+        "fields": {
+            "id": 2,
+            "nombre": "Inactivo"
+        }
+    },
+    {
+        "model": "inventario.Usuario",
+        "pk": 6,
+        "fields": {
+            "id": 6,
+            "password": "123",
+            "last_login": null,
+            "username": "jpalma",
+            "nombres": "Juan",
+            "apellidos": "Palma",
+            "email": "juan.palma@example.com",
+            "dni": "12345678",
+            "is_staff": true,
+            "is_active": true,
+            "is_superuser": false,
+            "estado_id": 1,
+            "rol_id": 2,
+            "sede_id": 2,
+            "unidadOrganica_id": 2
+        }
+    }
+]
