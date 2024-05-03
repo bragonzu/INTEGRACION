@@ -5,7 +5,7 @@ from django.contrib import  messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .forms import RegistroForm
+from .forms import RegistroForm,RegistroBienForm
 
 def home_view(request):
     # Verifica si el usuario está autenticado antes de mostrar la página de inicio
@@ -59,3 +59,24 @@ def index(request):
 
 def about_view(request):
     return render(request, 'about.html')
+
+def bien(request):
+    return render(request, 'bien/bien.html')
+
+def create_bien(request):
+    # return render(request, 'bien/create_bien.html')
+
+    if request.user.is_authenticated:
+        return redirect('bien')
+    if request.method == 'POST':
+        form = RegistroBienForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # username = form.cleaned_data.get('username')
+            # password = form.cleaned_data.get('password1')
+            # user = authenticate(username=username, password=password)
+            # login(request, user)
+            return redirect('bien')
+    else:
+        form = RegistroBienForm()
+    return render(request, 'bien/create_bien.html', {'form': form})

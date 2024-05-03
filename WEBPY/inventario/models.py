@@ -30,27 +30,20 @@ class Usuario(AbstractUser):
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
 
-    
-
 class Movimiento(models.Model):
-    nombre = models.CharField(max_length=50)
-
-class Situacion(models.Model):
     nombre = models.CharField(max_length=50)
 
 class Proceso(models.Model):
     movimiento = models.ForeignKey(Movimiento, on_delete=models.CASCADE)
     fechaIngreso = models.CharField(max_length=20)
     user = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    situacion = models.ForeignKey(Situacion, on_delete=models.CASCADE)
     fechaEliminacion = models.CharField(max_length=20)
 
-class Descripcion(models.Model):
+class TipoBien(models.Model):
     nombre = models.CharField(max_length=50)
 
-
 class Bien(models.Model):
-    descripcion = models.ForeignKey(Descripcion, on_delete=models.CASCADE)
+    tipoBien = models.ForeignKey(TipoBien, on_delete=models.CASCADE)
     ordenCompra = models.IntegerField()
     proveedor = models.CharField(max_length=20)
     marca = models.CharField(max_length=20)
@@ -59,7 +52,6 @@ class Bien(models.Model):
     fechaVenGarantia = models.CharField(max_length=20)
     componentes = models.CharField(max_length=50)
     estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
-    situacion = models.ForeignKey(Situacion, on_delete=models.CASCADE)
 
 class DetalleTransferencia(models.Model):
     motivo = models.CharField(max_length=100)
