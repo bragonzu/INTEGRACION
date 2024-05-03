@@ -4,18 +4,25 @@ from inventario.managers import UserManager
 
 class Sede(models.Model):
     nombre = models.CharField(max_length=50)
+    def __str__(self):
+        return f'{self.nombre}'
 
 class Rol(models.Model):
     nombre = models.CharField(max_length=50)
+    def __str__(self):
+        return f'{self.nombre}'
 
 class UnidadOrganica(models.Model):
     nombre = models.CharField(max_length=50)    
+    def __str__(self):
+        return f'{self.nombre}'
 
 class Estado(models.Model):
     nombre = models.CharField(max_length=50)   
+    def __str__(self):
+        return f'{self.nombre}'
 
 class Usuario(AbstractUser):
-    # Campos adicionales que desees incluir, como nombre, apellido, email, etc.
     nombres = models.CharField(max_length=255)
     apellidos = models.CharField(max_length=255, default="")
     email = models.EmailField(max_length=255,)
@@ -34,9 +41,13 @@ class Usuario(AbstractUser):
 
 class Movimiento(models.Model):
     nombre = models.CharField(max_length=50)
+    def __str__(self):
+        return f'{self.nombre}'
 
 class Situacion(models.Model):
     nombre = models.CharField(max_length=50)
+    def __str__(self):
+        return f'{self.nombre}'
 
 class Proceso(models.Model):
     movimiento = models.ForeignKey(Movimiento, on_delete=models.CASCADE)
@@ -47,7 +58,8 @@ class Proceso(models.Model):
 
 class Descripcion(models.Model):
     nombre = models.CharField(max_length=50)
-
+    def __str__(self):
+        return f'{self.nombre}'
 
 class Bien(models.Model):
     descripcion = models.ForeignKey(Descripcion, on_delete=models.CASCADE)
@@ -67,6 +79,8 @@ class DetalleTransferencia(models.Model):
 
 class Asunto(models.Model):
     nombre = models.CharField(max_length=50)
+    def __str__(self):
+        return f'{self.nombre}'
 
 class DetalleSalida(models.Model):
     asunto = models.ForeignKey(Asunto, on_delete=models.CASCADE)

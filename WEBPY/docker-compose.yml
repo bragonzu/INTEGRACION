@@ -4,6 +4,7 @@ services:
     build: .
     volumes:
       - .:/django
+      # - /home/braham/INTEGRACION/WEBPY/sql/data.sql:/docker-entrypoint-initdb.d/inserts.sql
     ports:
       - 8000:8000
     image: app:django
