@@ -1,8 +1,8 @@
 from django import forms
-from .models import Usuario
+from .models import Usuario,Bien
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate
-from .models import UnidadOrganica,Sede,Estado,Rol
+from .models import UnidadOrganica,Sede,Estado,Rol,TipoBien
 
 
 class RegistroForm(UserCreationForm):
@@ -61,3 +61,40 @@ class LoginForm(forms.Form):
         
         return cleaned_data
 
+class RegistroBienForm(forms.Form):
+    tipoBien = forms.ModelChoiceField(queryset=TipoBien.objects.all(), required=False, label='Tipo de Bien')
+    ordenCompra = forms.CharField(label='Orden de Compra')
+    proveedor = forms.CharField(max_length=20)
+    marca = forms.CharField(max_length=20)
+    modelo = forms.CharField(max_length=20)
+    serie = forms.CharField(max_length=20)
+    fechaVenGarantia = forms.CharField(max_length=20,label='Fecha Vencimiento Garantia')
+    componentes = forms.CharField(max_length=50)
+    estado = forms.ModelChoiceField(queryset=Estado.objects.all(), required=False)
+    class Meta:
+        model = Bien  # Use your custom user model if applicable
+        fields = ['tipoBien','ordenCompra','proveedor','marca','modelo','serie','fechaVenGarantia',
+                  'componentes','estado']  # Customize fields
+
+    def __init__(self, *args, **kwargs):
+        super(RegistroBienForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            if field.widget.attrs.get('class'):
+                field.widget.attrs['class'] += ' form-control'
+            else:
+                field.widget.attrs['class']='form-control'
+    
+    def save(self, commit=True):
+        user = super(RegistroBienForm, self).save(commit=False)
+        user.tipoBien = self.cleaned_data['tipoBien']
+        user.ordenCompra = self.cleaned_data['ordenCompra']
+        user.proveedor = self.cleaned_data['proveedor']
+        user.marca = self.cleaned_data['marca']
+        user.modelo = self.cleaned_data['modelo']
+        user.serie = self.cleaned_data['serie']
+        user.fechaVenGarantia = self.cleaned_data['fechaVenGarantia']
+        user.componentes = self.cleaned_data['componentes']
+        user.estado = self.cleaned_data['estado']
+        if commit:
+            user.save()
+        return user

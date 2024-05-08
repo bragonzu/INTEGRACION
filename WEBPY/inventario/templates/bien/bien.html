@@ -1,0 +1,47 @@
+{% extends 'layouts/nav.html' %} {% block content %}
+
+<main>
+  <section id="hero" class="hero d-flex align-center">
+    <div class="container">
+      <div class="row">
+        <h1 data-aos="fade-up"> Bienes</h1>
+        <div class="d-flex flex-row justify-content-center  margin-top">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Tipo de Bien</th>
+                    <th>Orden de Compra</th>
+                    <th>Proveedor</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Serie</th>
+                    <th>Fecha Vencimiento Garantia</th>
+                    <th>Componentes</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody class="table-border-bottom-0">
+                    {% for bien in bienes %}
+                  <tr>
+                    <td>{{bien.tipoBien}}</td>
+                    <td>{{bien.ordenCompra}}</td>
+                    <td>{{bien.proveedor}}</td>
+                    <td>{{bien.marca}}</td>
+                    <td>{{bien.modelo}}</td>
+                    <td>{{bien.serie}}</td>
+                    <td>{{bien.fechaVenGarantia}}</td>
+                    <td>{{bien.componentes}}</td>
+                    <td>{{bien.estado}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+           
+      </div>
+      <button type="button" class="btn btn-primary mx-auto w-25" href="{% url 'about' %}">REGRESAR</a>
+    </div>
+   
+  </section>
+</main>
+{% endblock  %}
+
